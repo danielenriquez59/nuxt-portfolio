@@ -1,136 +1,44 @@
 <template>
-    <div>
-        <Menubar :model="items" />
-    </div>
+    <Menubar :model="items" class="dark:bg-slate-700 dark:border-slate-600">
+        <template #start>
+            <div class="flex gap-20 items-center px-8 md:pl-[10vw]">
+                <h2>EZngineering</h2>
+                <div class="flex gap-3">
+                    <div v-if="resumeType">
+                        <img src="~/assets/airplane.svg" class="w-10 filter dark:invert">
+                    </div>
+                    <div v-else>
+                        <img src="~/assets/computer.svg" class="w-10  filter dark:invert">
+                    </div>
+                    <ToggleButton v-model="resumeType" onLabel="Aerospace" offLabel="Software" class="text-sm w-32" />
+                </div>
+                <div class="flex gap-2 items-start mt-1 ">
+                    <i class="pi pi-sun mx-1"></i>
+                    <InputSwitch v-model="darkMode" size="sm" :pt="{ slider: { class: 'h-5' } }" />
+                </div>
+            </div>
+        </template>
+    </Menubar>
 </template>
 
 <script setup>
 // composition API
 import Menubar from 'primevue/menubar';
+import ToggleButton from 'primevue/togglebutton';
+import InputSwitch from 'primevue/inputswitch';
+const resumeType = isAerospaceState();
+const darkMode = darkModeState()
+const items = ref([]);
+const colorMode = useColorMode()
 
-const items = ref([
-    {
-        label: 'File',
-        icon: 'pi pi-fw pi-file',
-        items: [
-            {
-                label: 'New',
-                icon: 'pi pi-fw pi-plus',
-                items: [
-                    {
-                        label: 'Bookmark',
-                        icon: 'pi pi-fw pi-bookmark'
-                    },
-                    {
-                        label: 'Video',
-                        icon: 'pi pi-fw pi-video'
-                    }
-                ]
-            },
-            {
-                label: 'Delete',
-                icon: 'pi pi-fw pi-trash'
-            },
-            {
-                separator: true
-            },
-            {
-                label: 'Export',
-                icon: 'pi pi-fw pi-external-link'
-            }
-        ]
-    },
-    {
-        label: 'Edit',
-        icon: 'pi pi-fw pi-pencil',
-        items: [
-            {
-                label: 'Left',
-                icon: 'pi pi-fw pi-align-left'
-            },
-            {
-                label: 'Right',
-                icon: 'pi pi-fw pi-align-right'
-            },
-            {
-                label: 'Center',
-                icon: 'pi pi-fw pi-align-center'
-            },
-            {
-                label: 'Justify',
-                icon: 'pi pi-fw pi-align-justify'
-            }
-        ]
-    },
-    {
-        label: 'Users',
-        icon: 'pi pi-fw pi-user',
-        items: [
-            {
-                label: 'New',
-                icon: 'pi pi-fw pi-user-plus'
-            },
-            {
-                label: 'Delete',
-                icon: 'pi pi-fw pi-user-minus'
-            },
-            {
-                label: 'Search',
-                icon: 'pi pi-fw pi-users',
-                items: [
-                    {
-                        label: 'Filter',
-                        icon: 'pi pi-fw pi-filter',
-                        items: [
-                            {
-                                label: 'Print',
-                                icon: 'pi pi-fw pi-print'
-                            }
-                        ]
-                    },
-                    {
-                        icon: 'pi pi-fw pi-bars',
-                        label: 'List'
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        label: 'Events',
-        icon: 'pi pi-fw pi-calendar',
-        items: [
-            {
-                label: 'Edit',
-                icon: 'pi pi-fw pi-pencil',
-                items: [
-                    {
-                        label: 'Save',
-                        icon: 'pi pi-fw pi-calendar-plus'
-                    },
-                    {
-                        label: 'Delete',
-                        icon: 'pi pi-fw pi-calendar-minus'
-                    }
-                ]
-            },
-            {
-                label: 'Archieve',
-                icon: 'pi pi-fw pi-calendar-times',
-                items: [
-                    {
-                        label: 'Remove',
-                        icon: 'pi pi-fw pi-calendar-minus'
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        label: 'Quit',
-        icon: 'pi pi-fw pi-power-off'
+watch(darkMode, () => {
+    if (darkMode.value) {
+        colorMode.preference = "dark"
+    } else {
+        colorMode.preference = "light"
+
     }
-]);
+})
 
 </script>
 
