@@ -16,24 +16,7 @@
                 </div>
             </div>
             <form class="col-span-12 md:col-span-7 justify-self-center" name="contact" method="POST" data-netlify="true">
-                <div class="flex flex-column gap-2 my-2">
-                    <InputText id="name" v-model="state.name" placeholder="Name" :pt="{
-                        root: { class: 'w-3/4' }
-                    }" />
-                </div>
-                <div class="flex flex-column gap-2 my-2">
-                    <InputText id="email" v-model="state.email" placeholder="Email" :pt="{
-                        root: { class: 'w-3/4' }
-                    }" />
-                </div>
-                <div class="flex flex-column gap-2 my-2">
-                    <InputText id="phone" v-model="state.phone" placeholder="Phone" :pt="{
-                        root: { class: 'w-3/4' }
-                    }" />
-                </div>
-                <div class="flex flex-column gap-2 my-2">
-                    <Textarea autoresize v-model="state.message" rows="5" cols="52" placeholder="Send Me a Message...." />
-                </div>
+                <input placeholder="Name" class="w-full" type="text" />
                 <!-- <Button label="Send" type="submit" class="p-button-raised my-4" icon="pi pi-send"></Button> -->
                 <button type="submit" class="bg-blue-500 p-2 rounded-md px-3 hover:bg-blue-400 active:bg-blue-900">
                     <div class="flex gap-2 items-center"> <i class="pi pi-send text-black"></i>Send</div>
