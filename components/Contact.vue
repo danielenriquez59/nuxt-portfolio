@@ -35,7 +35,9 @@
                     <Textarea autoresize v-model="state.message" rows="5" cols="52" placeholder="Send Me a Message...." />
                 </div>
                 <!-- <Button label="Send" type="submit" class="p-button-raised my-4" icon="pi pi-send"></Button> -->
-                <button type="submit">Send</button>
+                <button type="submit" class="bg-blue-500 p-2 rounded-md px-3 hover:bg-blue-400 active:bg-blue-900">
+                    <div class="flex gap-2 items-center"> <i class="pi pi-send text-black"></i>Send</div>
+                </button>
             </form>
         </div>
 
