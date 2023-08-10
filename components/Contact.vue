@@ -1,5 +1,5 @@
 <template>
-    <AppSection>
+    <AppSection id="contact">
         <div class="grid grid-cols-12 gap-5">
             <div class="col-span-12 md:col-span-5">
                 <div class="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 text-center"

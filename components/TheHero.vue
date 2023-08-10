@@ -26,8 +26,10 @@
                             me now to get started desiging yours! </p>
                     </div>
                     <div class="flex gap-3">
-                        <Button label="Contact" type="button" class="p-button-raised"></Button>
-                        <Button label="View Resume" type="button" class="p-button-outlined"></Button>
+                        <Button label="Contact" type="button" class="p-button-raised" @click="scrollToContact"></Button>
+                        <a href="/contact.jpg" download>
+                            <Button label="View Resume" type="button" class="p-button-outlined"></Button>
+                        </a>
                     </div>
                 </section>
             </div>
@@ -51,6 +53,13 @@ const computedClass = ref(resumeType.value ? 'hero-aerospace' : 'hero-coding');
 watch(resumeType, (newValue) => {
     computedClass.value = newValue ? 'hero-aerospace' : 'hero-coding';
 });
+
+scrollToContact() {
+    const element = document.querySelector('#contact');
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 
 </script>
 
