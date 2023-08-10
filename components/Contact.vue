@@ -16,11 +16,18 @@
                 </div>
             </div>
             <form class="col-span-12 md:col-span-7 justify-self-center" name="contact" method="POST" data-netlify="true">
-                <input placeholder="Name" class="w-full" type="text" />
-                <!-- <Button label="Send" type="submit" class="p-button-raised my-4" icon="pi pi-send"></Button> -->
-                <button type="submit" class="bg-blue-500 p-2 rounded-md px-3 hover:bg-blue-400 active:bg-blue-900">
-                    <div class="flex gap-2 items-center"> <i class="pi pi-send text-black"></i>Send</div>
-                </button>
+                <p>
+                    <label>Your Name: <input type="text" name="name" /></label>
+                </p>
+                <p>
+                    <label>Your Email: <input type="email" name="email" /></label>
+                </p>
+                <p>
+                    <label>Message: <textarea name="message"></textarea></label>
+                </p>
+                <p>
+                    <button type="submit">Send</button>
+                </p>
             </form>
         </div>
 
