@@ -3,7 +3,7 @@
         <h2>
             <span>How It Works </span>
         </h2>
-        <div class="text-700 mb-6">My design process helps you quickly bring your app or website to life.</div>
+        <div class="text-700 mb-6 px-2">My design process helps you quickly bring your app or website to life.</div>
         <div class="grid grid-cols-12">
             <SolutionsCard icon="pi-book">
                 <template #title>

@@ -2,7 +2,7 @@
 <template>
     <AppSection>
         <h2 class="text-center">Portfolio</h2>
-        <Carousel :value="jobs" :numVisible="3" :numScroll="3">
+        <Carousel :value="jobs" :numVisible="mdAndDown ? 1 : 3" :numScroll="mdAndDown ? 1 : 3">
             <template #item="slotProps">
                 <CardExperience :slotProps="slotProps" :key="slotProps.data.name" />
             </template>
@@ -12,6 +12,7 @@
 
 <script setup>
 import Carousel from 'primevue/carousel';
+const { mdAndDown } = useBreakpoints();
 
 const jobs = [
     {

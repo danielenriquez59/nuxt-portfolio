@@ -2,7 +2,7 @@
     <AppSection id="contact">
         <div class="grid grid-cols-12 gap-5">
             <div class="col-span-12 md:col-span-5">
-                <div class="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 text-center"
+                <div class="relative overflow-hidden md:rounded-lg bg-cover bg-no-repeat p-12 text-center"
                     style="background-image: url('/contact.jpg'); height: 400px">
                     <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
                         style="background-color: rgba(0, 0, 0, 0.65)">

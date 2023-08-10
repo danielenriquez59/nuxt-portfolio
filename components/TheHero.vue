@@ -2,8 +2,8 @@
     <nuxt-img preload src="/images/coding.jpg" alt="coding" class="hidden" />
     <nuxt-img preload src="/images/aircraft.jpg" alt="aircraft" class="hidden" />
     <AppSection class=" md:py-0 hero " :class="computedClass">
-        <div class="grid grid-cols-12 grid-nogutter text-800 bg-center bg-cover bg-no-repeat px-[3vw]">
-            <div class="col-span-12 md:col-span-6 p-2 text-center md:text-left flex align-items-center">
+        <div class="grid grid-cols-12 grid-nogutter text-800 bg-center bg-cover bg-no-repeat md:px-[3vw] ">
+            <div class="col-span-12 md:col-span-6 p-2 text-center md:text-left flex align-items-center my-3">
                 <section class="place-self-center filter-none">
                     <transition name="swipe" mode="out-in">
                         <div v-if="resumeType">
@@ -42,16 +42,22 @@
                     </div>
                 </section>
             </div>
-            <div class="col-span-12 md:col-span-6">
+            <!-- <div class="col-span-12 md:col-span-6">
                 <nuxt-img preload src="/images/profile-pic-sq.webp" alt="Image"
                     class="md:ml-auto block md:h-[75vh] filter-none"
                     style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)" />
+            </div> -->
+            <div class="col-span-12 md:col-span-6 -mb-16 md:mb-0">
+                <nuxt-img preload src="/images/profile-pic-sq.webp" alt="Profile image"
+                    class="md:ml-auto block md:h-[75vh] filter-none"
+                    :style="!mdAndDown ? 'clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)' : ''" />
             </div>
         </div>
     </AppSection>
 </template>
 
 <script setup>
+const { mdAndDown } = useBreakpoints();
 
 const resumeType = isAerospaceState();
 
@@ -88,31 +94,63 @@ function scrollToExperience() {
 
 .hero-coding {
     background-image: linear-gradient(to right, rgba(244, 244, 244, 0.85) 0%,
-            rgba(244, 244, 244, 1.0) 60%,
-            rgba(244, 244, 244, 1.0) 90%,
-            rgba(244, 244, 244, 0.85) 100%), url(/images/coding.jpg);
+            rgba(244, 244, 244, 1.0) 0%,
+            rgba(244, 244, 244, 1.0) 0%,
+            rgba(244, 244, 244, 0.85) 0%), url(/images/coding.jpg);
 }
 
 .hero-aerospace {
     background-image: linear-gradient(to right, rgba(244, 244, 244, 0.85) 0%,
-            rgba(244, 244, 244, 1.0) 60%,
-            rgba(244, 244, 244, 1.0) 90%,
-            rgba(244, 244, 244, 0.85) 100%), url(/images/aircraft.jpg);
+            rgba(244, 244, 244, 1.0) 0%,
+            rgba(244, 244, 244, 1.0) 0%,
+            rgba(244, 244, 244, 0.85) 0%), url(/images/aircraft.jpg);
 }
 
 .dark .hero-coding {
-    /* You may also need to adjust the dark mode background-image as per your requirements */
+    /* Adjust the dark mode background-image as needed */
     background-image: linear-gradient(to right, rgba(51, 65, 85, 0.85) 0%,
-            rgba(51, 65, 85, 1.0) 60%,
-            rgba(51, 65, 85, 1.0) 90%,
-            rgba(51, 65, 85, 0.85) 100%), url(/images/coding.jpg);
+            rgba(51, 65, 85, 1.0) 0%,
+            rgba(51, 65, 85, 1.0) 0%,
+            rgba(51, 65, 85, 0.85) 0%), url(/images/coding.jpg);
 }
 
 .dark .hero-aerospace {
-    /* You may also need to adjust the dark mode background-image as per your requirements */
+    /* Adjust the dark mode background-image as needed */
     background-image: linear-gradient(to right, rgba(51, 65, 85, 0.85) 0%,
-            rgba(51, 65, 85, 1.0) 60%,
-            rgba(51, 65, 85, 1.0) 90%,
-            rgba(51, 65, 85, 0.85) 100%), url(/images/aircraft.jpg);
+            rgba(51, 65, 85, 1.0) 0%,
+            rgba(51, 65, 85, 1.0) 0%,
+            rgba(51, 65, 85, 0.85) 0%), url(/images/aircraft.jpg);
+}
+
+@media (min-width: 768px) {
+    .hero-coding {
+        background-image: linear-gradient(to right, rgba(244, 244, 244, 0.85) 0%,
+                rgba(244, 244, 244, 1.0) 60%,
+                rgba(244, 244, 244, 1.0) 90%,
+                rgba(244, 244, 244, 0.85) 100%), url(/images/coding.jpg);
+    }
+
+    .hero-aerospace {
+        background-image: linear-gradient(to right, rgba(244, 244, 244, 0.85) 0%,
+                rgba(244, 244, 244, 1.0) 60%,
+                rgba(244, 244, 244, 1.0) 90%,
+                rgba(244, 244, 244, 0.85) 100%), url(/images/aircraft.jpg);
+    }
+
+    .dark .hero-coding {
+        /* Adjust the dark mode background-image as needed */
+        background-image: linear-gradient(to right, rgba(51, 65, 85, 0.85) 0%,
+                rgba(51, 65, 85, 1.0) 60%,
+                rgba(51, 65, 85, 1.0) 90%,
+                rgba(51, 65, 85, 0.85) 100%), url(/images/coding.jpg);
+    }
+
+    .dark .hero-aerospace {
+        /* Adjust the dark mode background-image as needed */
+        background-image: linear-gradient(to right, rgba(51, 65, 85, 0.85) 0%,
+                rgba(51, 65, 85, 1.0) 60%,
+                rgba(51, 65, 85, 1.0) 90%,
+                rgba(51, 65, 85, 0.85) 100%), url(/images/aircraft.jpg);
+    }
 }
 </style>

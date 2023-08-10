@@ -4,7 +4,7 @@
             <span>One Engineer, </span>
             <span class="text-blue-600">Many Solutions</span>
         </h2>
-        <div class="text-700 mb-6">With 7+ years of experience in the aerospace industry, I have a proven record of
+        <div class="text-700 mb-6 px-2">With 7+ years of experience in the aerospace industry, I have a proven record of
             success in the field.</div>
         <div class="grid grid-cols-12">
             <SolutionsCard icon="pi-book">

@@ -1,19 +1,20 @@
 <template>
     <Menubar :model="items" class="-mx-0 shadow-sm " :class="[darkMode ? 'dark' : '']">
         <template #start>
-            <div class="flex gap-20 items-center px-8 md:pl-[10vw]">
-                <h2>EZngineering</h2>
+            <div class="flex gap-3 md:gap-20 items-center md:px-8 md:pl-[10vw]">
+                <h2 class="text-2xl md:text-4xl">EZngineering</h2>
                 <div class="flex gap-3">
-                    <div v-if="resumeType">
+                    <div v-if="resumeType" class=" hidden md:block">
                         <img src="~/assets/airplane.svg" class="w-10 filter dark:invert">
                     </div>
-                    <div v-else>
+                    <div v-else class=" hidden md:block">
                         <img src="~/assets/computer.svg" class="w-10  filter dark:invert">
                     </div>
-                    <ToggleButton v-model="resumeType" onLabel="Aerospace" offLabel="Software" class="text-sm w-32" />
+                    <ToggleButton v-model="resumeType" onLabel="Aerospace" offLabel="Software"
+                        class="text-sm w-24 md:w-32" />
                 </div>
                 <div class="flex gap-2 items-start mt-1 ">
-                    <i class="pi pi-sun mx-1"></i>
+                    <i class="pi pi-sun md:mx-1"></i>
                     <InputSwitch v-model="darkMode" size="sm" :pt="{ slider: { class: 'h-5' } }" />
                 </div>
             </div>
