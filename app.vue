@@ -1,6 +1,6 @@
 <template>
   <div class="relative overflow-hidden">
-    <the-nav></the-nav>
+    <the-nav class="fixed z-20 w-full"></the-nav>
     <NuxtPage />
     <the-footer></the-footer>
   </div>

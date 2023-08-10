@@ -18,10 +18,12 @@
             <div class="flex gap-8 justify-center">
                 <img src="~/assets/logos/html.svg" alt="html" class="h-14" />
                 <img src="~/assets/logos/css.svg" alt="css" class="h-14" />
-                <img src="~/assets/logos/mongodb.svg" alt="mongodb" class="h-20" />
+                <img src="~/assets/logos/mongodb.svg" alt="mongodb" class="h-14" />
                 <img src="~/assets/logos/vue.svg" alt="vue" class="h-14" />
                 <img src="~/assets/logos/firebase.svg" alt="firebase" class="h-14" />
                 <img src="~/assets/logos/github.svg" alt="github" class="h-14" />
+                <img src="~/assets/logos/python.svg" alt="python" class="h-14" />
+                <img src="~/assets/logos/matlab.svg" alt="matlab" class="h-14" />
             </div>
         </div>
     </AppSection>

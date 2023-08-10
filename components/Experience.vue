@@ -2,13 +2,13 @@
 <template>
     <AppSection>
         <h2>Professional Experience</h2>
-        <TabView lazy>
+        <TabView lazy class="shadow-md">
             <TabPanel v-for="(job, index) in jobs" :key="job" :header="job.role">
                 <ScrollPanel class="px-5 h-72 custombar1">
                     <div class="grid grid-cols-12">
                         <div class="col-span-12 md:col-span-8">
                             <div class="flex gap-5 items-center">
-                                <h3 class=" text-gray-800 m-0">{{ job.company }}</h3>
+                                <h3 class="dark:text-gray-800 text-gray-800 m-0">{{ job.company }}</h3>
                                 <p class="text-gray-400 ml-auto pr-8">{{ job.date }}</p>
                             </div>
                             <ul v-for="desc in  job.description" :key="desc" style="list-style-type:square" class="px-5">
@@ -107,7 +107,7 @@ const jobs = [
     background-color: var(--primary-200);
 }
 
-.p-tabview .p-tabview-nav {
-    background-color: black;
+.p-tabview-panels .p-tabview-nav {
+    background: rgb(0 0 0);
 }
 </style>

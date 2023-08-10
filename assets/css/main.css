@@ -18,6 +18,20 @@
     body {
       @apply dark:bg-slate-800 dark:text-gray-100;
     }
+    p {
+      @apply  dark:text-gray-100;
+    }
     i {
       @apply filter dark:invert;
     }
+
+
+/* Updated styles with cubic-bezier for smooth transition */
+.swipe-enter-active, .swipe-leave-active {
+  transition: transform 0.15s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.15s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.swipe-enter, .swipe-leave-to /* .swipe-leave-active in <2.1.8 */ {
+  transform: translateY(10%);
+  opacity: 0;
+}
+

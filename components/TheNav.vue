@@ -1,5 +1,5 @@
 <template>
-    <Menubar :model="items" class="dark:bg-slate-700 dark:border-slate-600">
+    <Menubar :model="items" class="-mx-0 shadow-sm " :class="[darkMode ? 'dark' : '']">
         <template #start>
             <div class="flex gap-20 items-center px-8 md:pl-[10vw]">
                 <h2>EZngineering</h2>
@@ -42,3 +42,14 @@ watch(darkMode, () => {
 
 </script>
 
+<style scoped>
+.p-menubar {
+    background-color: rgb(241, 245, 249);
+    border: 0;
+}
+
+.dark .p-menubar {
+    background-color: rgb(51 65 85);
+    border: 0;
+}
+</style>
