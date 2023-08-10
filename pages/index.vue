@@ -12,4 +12,8 @@
 const darkMode = darkModeState()
 const resumeType = isAerospaceState();
 
+definePageMeta({
+    title: 'EZngineering - Aerospace & Web Development Specialist',
+})
+
 </script>

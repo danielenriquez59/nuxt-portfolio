@@ -2,8 +2,25 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@nuxt/image',
   ],
+  head: {
+    "meta": [
+      {
+        "name": "viewport",
+        "content": "width=device-width, initial-scale=1"
+      },
+      {
+        "charset": "utf-8"
+      }
+    ],
+    "link": [
+    ],
+    "style": [],
+    "script": [],
+    "noscript": []
+  },
   colorMode: {
     classSuffix: ''
   },
