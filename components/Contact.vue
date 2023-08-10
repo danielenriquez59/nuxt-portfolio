@@ -15,19 +15,26 @@
                     </div>
                 </div>
             </div>
-            <form class="col-span-12 md:col-span-7 justify-self-center" name="contact" method="POST" data-netlify="true">
-                <p>
-                    <label>Your Name: <input type="text" name="name" /></label>
-                </p>
-                <p>
-                    <label>Your Email: <input type="email" name="email" /></label>
-                </p>
-                <p>
-                    <label>Message: <textarea name="message"></textarea></label>
-                </p>
-                <p>
-                    <button type="submit">Send</button>
-                </p>
+            <form class="col-span-12 md:col-span-7 px-5 space-y-4" name="contact" method="POST" data-netlify="true">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-100 ">Your Name:</label>
+                    <input class="mt-1 p-2 w-full border rounded-md text-black" type="text" name="name" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-100">Your Email:</label>
+                    <input class="mt-1 p-2 w-full border rounded-md text-black" type="email" name="email" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-100">Message:</label>
+                    <textarea class="mt-1 p-2 w-full h-32 border rounded-md text-black" name="message"></textarea>
+                </div>
+                <div>
+                    <button
+                        class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50"
+                        type="submit">
+                        <div class="flex gap-2 items-center"><i class="pi pi-send text-black "></i>Send</div>
+                    </button>
+                </div>
             </form>
         </div>
 
