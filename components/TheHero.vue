@@ -2,7 +2,7 @@
     <nuxt-img preload src="/images/coding.jpg" alt="coding" class="hidden" />
     <nuxt-img preload src="/images/aircraft.jpg" alt="aircraft" class="hidden" />
     <AppSection class=" md:py-0 hero " :class="computedClass">
-        <div class="grid grid-cols-12 grid-nogutter text-800 bg-center bg-cover bg-no-repeat px-[5vw]">
+        <div class="grid grid-cols-12 grid-nogutter text-800 bg-center bg-cover bg-no-repeat px-[3vw]">
             <div class="col-span-12 md:col-span-6 p-2 text-center md:text-left flex align-items-center">
                 <section class="place-self-center filter-none">
                     <transition name="swipe" mode="out-in">
