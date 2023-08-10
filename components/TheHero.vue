@@ -26,10 +26,19 @@
                             me now to get started desiging yours! </p>
                     </div>
                     <div class="flex gap-3">
-                        <Button label="Contact" type="button" class="p-button-raised" @click="scrollToContact"></Button>
-                        <a href="/contact.jpg" download>
-                            <Button label="View Resume" type="button" class="p-button-outlined"></Button>
-                        </a>
+                        <Button label="Contact Me" type="button" class="p-button-raised" @click="scrollToContact"></Button>
+                        <Button label="See Projects" type="button" class="p-button-outlined"
+                            @click="scrollToExperience"></Button>
+                        <!-- <div v-if="resumeType">
+                            <a href="/contact.jpg" download>
+                                <Button label="View Resume" type="button" class="p-button-outlined"></Button>
+                            </a>
+                        </div>
+                        <div v-else>
+                            <a href="/contact.jpg" download>
+                                <Button label="View Resume" type="button" class="p-button-outlined"></Button>
+                            </a>
+                        </div> -->
                     </div>
                 </section>
             </div>
@@ -54,13 +63,19 @@ watch(resumeType, (newValue) => {
     computedClass.value = newValue ? 'hero-aerospace' : 'hero-coding';
 });
 
-scrollToContact() {
+function scrollToContact() {
     const element = document.querySelector('#contact');
     if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
     }
 }
 
+function scrollToExperience() {
+    const element = document.querySelector('#experience');
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 </script>
 
 <style scoped>

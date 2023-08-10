@@ -34,7 +34,7 @@
                 <div class="flex flex-column gap-2 my-2">
                     <Textarea autoresize v-model="state.message" rows="5" cols="52" placeholder="Send Me a Message...." />
                 </div>
-                <Button label="Send" type="submit" class="p-button-raised my-4" icon="pi pi-send"></Button>
+                <!-- <Button label="Send" type="submit" class="p-button-raised my-4" icon="pi pi-send"></Button> -->
             </form>
         </div>
 
