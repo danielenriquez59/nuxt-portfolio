@@ -15,8 +15,7 @@
                     </div>
                 </div>
             </div>
-            <form class="col-span-12 md:col-span-7 justify-self-center" @submit="onSubmit" name="contact" method="POST"
-                data-netlify="true">
+            <form class="col-span-12 md:col-span-7 justify-self-center" name="contact" method="POST" data-netlify="true">
                 <div class="flex flex-column gap-2 my-2">
                     <InputText id="name" v-model="state.name" placeholder="Name" :pt="{
                         root: { class: 'w-3/4' }
@@ -61,5 +60,3 @@ function onSubmit() {
     state.message = '';
 }
 </script>
-
-<style lang="scss" scoped></style>
