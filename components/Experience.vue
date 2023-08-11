@@ -1,6 +1,6 @@
 
 <template>
-    <AppSection>
+    <AppSection class="px-2">
         <h2>Professional Experience</h2>
         <TabView lazy class="shadow-md">
             <TabPanel v-for="(job, index) in jobs" :key="job" :header="job.role">
