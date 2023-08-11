@@ -11,7 +11,7 @@
                             <h1 class="mb-5 ">engineering expert!</h1>
                         </div>
                         <div v-else>
-                            <h1 class="block ">Your software </h1>
+                            <h1 class="block ">Your fullstack </h1>
                             <h1 class="text-primary mb-5 ">development expert!</h1>
                         </div>
                     </transition>
