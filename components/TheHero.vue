@@ -48,8 +48,7 @@
                     style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)" />
             </div> -->
             <div class="col-span-12 md:col-span-6 -mb-16 md:mb-0">
-                <nuxt-img preload src="/images/profile-pic-sq.webp" alt="Profile image"
-                    class="md:ml-auto block md:h-[75vh] filter-none"
+                <img src="/images/profile-pic-sq.webp" alt="Profile image" class="md:ml-auto block md:h-[75vh] filter-none"
                     :style="!mdAndDown ? 'clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)' : ''" />
             </div>
         </div>
